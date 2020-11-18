@@ -1,0 +1,36 @@
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+
+	<p>	<%= frame %> <%=	makeSoundButton ({soundFile: placerec, maxRepeat: 2, label: name}) %><%= frame2 %> </p>
+
+	<p>
+	<img src="resources/pictures/<%= picture %>" width="300" style="padding:10px; border: none;"><br>
+	</p>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+<p> Prepare for the <b><i><%= nominal %></i></b> of your vacation! </p>
+
+<% if (stressedfirst) { %>
+<%=	makeSoundButton ({soundFile: stressrec, maxRepeat: 2, label: 'Option 1'}) %>
+<%	} else { %>
+<%=	makeSoundButton ({soundFile: stresslessrec, maxRepeat: 2, label: 'Option 1'}) %> 
+<%	}%>
+	
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+
+<% if (stressedfirst) { %>
+<%=	makeSoundButton ({soundFile: stresslessrec, maxRepeat: 2, label: 'Option 2'}) %>
+<%	} else { %>
+<%=	makeSoundButton ({soundFile: stressrec, maxRepeat: 2, label: 'Option 2'}) %>
+<% }%>
+		
+</div>
+<div class="trialpartWrapper" style="clear:both; text-align: center;">  
+		Which of these options do you prefer?
+		<p>
+	<%= makeScale({buttons: ['Option 1', 'Option 2'], edgelabels: ["", ""], hide: true}) %>
+		
+</div>
+ 
+<div style="clear: both; height: 1px;">&nbsp;</div>

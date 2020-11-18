@@ -1,0 +1,43 @@
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+
+	<p>	<%= frame %> <%=	makeSoundButton ({soundFile: placerec, maxRepeat: 2, label: name}) %><%= frame2 %> </p>
+
+<p> First, please listen to the recording of the destination name, by pressing the button that says '<%= name %>'. You may listen to this recording twice and twice only. </p> 
+
+	<p>
+	<img src="resources/pictures/<%= picture %>" width="300" style="padding:10px; border: none;"><br>
+	</p>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+<p> Here is the slogan that the travel company would like to use, when advertising travel to <%= name %>:</p>
+
+<p> Prepare for the <b><i><%= nominal %></i></b> of your vacation! </p>
+
+	<p>
+	Next, please listen to the two recordings below, by pressing 'Option 1' and 'Option 2', which are two possible ways of pronouncing <b><i><%= nominal %></i></b>. </p>
+
+<% if (stressedfirst) { %>
+<%=	makeSoundButton ({soundFile: stressrec, maxRepeat: 2, label: 'Option 1'}) %>
+<%	} else { %>
+<%=	makeSoundButton ({soundFile: stresslessrec, maxRepeat: 2, label: 'Option 1'}) %> 
+<%	}%>
+	
+</div>
+
+<div class="trialpartWrapper" style="clear:both; text-align: center;">
+
+<% if (stressedfirst) { %>
+<%=	makeSoundButton ({soundFile: stresslessrec, maxRepeat: 2, label: 'Option 2'}) %>
+<%	} else { %>
+<%=	makeSoundButton ({soundFile: stressrec, maxRepeat: 2, label: 'Option 2'}) %>
+<% }%>
+		
+</div>
+<div class="trialpartWrapper" style="clear:both; text-align: center;">  
+		Now that you have listened to the recordings, please choose which pronunciation you prefer.  If you aren't sure, you can listen to each recording one more time (and one more time only) before you decide.
+		<p>
+	<%= makeScale({buttons: ['Option 1', 'Option 2'], edgelabels: ["", ""], hide: true}) %>
+		
+</div>
+ 
+<div style="clear: both; height: 1px;">&nbsp;</div>
